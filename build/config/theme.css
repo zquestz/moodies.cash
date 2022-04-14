@@ -1,0 +1,20 @@
+:root {
+  --primary: #ffffff;
+  --primary-text: #000000;
+  --secondary: #f31517;
+  --secondary-text: #ffffff;
+  --accent: #ffffff;
+  --accent-text: #000000;
+}
+
+.social img {
+  width: 32px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.countdown {
+  margin-top: 1em;
+  color: #1cbeff;
+  font-size: 2em;
+}

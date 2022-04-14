@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: moodies
+  namespace: default
+spec:
+  ports:
+    - port: 852
+      targetPort: 80
+  selector:
+    service: moodies
+  type: NodePort

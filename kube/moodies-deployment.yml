@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    service: moodies
+  name: moodies
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      service: moodies
+  template:
+    metadata:
+      labels:
+        service: moodies
+    spec:
+      containers:
+      - image: zquestz/moodies.cash:latest
+        imagePullPolicy: Always
+        name: moodies
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "8Mi"
+      restartPolicy: Always
